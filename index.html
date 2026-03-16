@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayush Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- DYNAMIC BACKGROUND -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+
+  <!-- PAGE LOAD INTRO -->
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-logo">Portfolio</div>
+    <div class="intro-bar"></div>
+  </div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- GRAIN -->
+  <div class="grain"></div>
+
+  <canvas id="particles"></canvas>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-tech" id="modalTech"></p>
+      <p class="modal-desc" id="modalDesc"></p>
+      <ul class="modal-points" id="modalPoints"></ul>
+      <div class="modal-actions">
+        <a class="modal-btn" id="modalGithub" href="#" target="_blank">
+          <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education & Training</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Ayush Kumar</h1>
+    <h2 class="typing-text"><span id="typing"></span></h2>
+    <p class="hero-description">
+      Computer Science undergraduate passionate about full-stack development
+      and problem-solving — building responsive web applications and AI-assisted tools.
+    </p>
+    <div class="hero-buttons">
+      <a href="Ayush_CV.pdf" download>
+        <i class="fa-solid fa-download"></i> Download CV
+      </a>
+      <a href="https://github.com/Ayush-Kumar07" target="_blank">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/ayush-kumar-5228a2298/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section id="about" class="section">
+    <h2>About</h2>
+    <div class="summary-grid">
+      <div class="summary-text">
+        <p>
+          I'm a Computer Science undergraduate at Lovely Professional University with a CGPA of 6.44.
+          I'm passionate about problem-solving and algorithmic thinking, having completed advanced
+          training in Data Structures and Algorithms. I enjoy building interactive web applications
+          and am always eager to learn new technologies.
+        </p>
+        <p>
+          With hands-on experience in JavaScript, React, NodeJS, PHP, Java, and Python, I have
+          developed projects like an AI Personal Sneaker Chatbot and a full-stack Online Book Store.
+          I am a quick learner, adaptable, and demonstrate strong leadership skills through my
+          extracurricular activities.
+        </p>
+      </div>
+      <div class="summary-stats">
+        <div class="stat-card">
+          <span class="stat-num">6.44</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">2+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Certificates</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">Active</span>
+          <span class="stat-label">Leadership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="tags">
+          <span>C</span><span>C++</span><span>JavaScript</span><span>Java</span><span>Python</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Frameworks</h3>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>NodeJS</span><span>React</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Tools & Platforms</h3>
+        <div class="tags">
+          <span>MySQL</span><span>MongoDB</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Technical Areas</h3>
+        <div class="tags">
+          <span>DSA</span><span>Algorithm Design</span><span>Complexity Analysis</span>
+          <span>Programming Fundamentals</span><span>Full-Stack Development</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Soft Skills</h3>
+        <div class="tags">
+          <span>Problem-Solving</span><span>Quick Learner</span>
+          <span>Leadership</span><span>Adaptability</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION / TIMELINE -->
+  <section id="education" class="section">
+    <h2>Education & Training</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Jul 2025</div>
+        <div class="timeline-card">
+          <h3>Logic Building Programming and Data Structure</h3>
+          <h4>CPE LPU</h4>
+          <p>Completed advanced training focused on problem-solving, algorithmic thinking, and efficient code
+            development using core data structures like arrays, linked lists, stacks, queues, trees, and graphs.</p>
+          <div class="timeline-tags">
+            <span>DSA</span><span>Algorithms</span><span>Problem Solving</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Aug 2023 – Present</div>
+        <div class="timeline-card">
+          <h3>B.Tech — Computer Science & Engineering</h3>
+          <h4>Lovely Professional University, Punjab, India</h4>
+          <p>Pursuing a degree in Computer Science and Engineering with a current CGPA of 6.44.</p>
+          <div class="timeline-tags">
+            <span>CGPA 6.44</span><span>Computer Science</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Apr 2021 – Mar 2022</div>
+        <div class="timeline-card">
+          <h3>Intermediate</h3>
+          <h4>Doon Global School, Patna, Bihar</h4>
+          <p>Completed higher secondary education focusing on fundamental sciences with 64.2%.</p>
+          <div class="timeline-tags">
+            <span>64.2%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Apr 2019 – Mar 2020</div>
+        <div class="timeline-card">
+          <h3>Matriculation</h3>
+          <h4>St. Karen's High School, Patna, Bihar</h4>
+          <p>Completed secondary education with 67%.</p>
+          <div class="timeline-tags">
+            <span>67%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+
+      <div class="project-card" data-title="AI Personal Sneaker Chatbot" data-icon="👟"
+        data-tech="JavaScript · HTML · CSS · Chatbot Logic"
+        data-desc="An AI-powered sneaker recommendation Chatbot designed to help users discover shoes based on multiple preferences."
+        data-points='["Built an AI-powered sneaker recommendation Chatbot that helps users discover shoes based on style, budget, comfort, and brand preferences through interactive real-time responses.","Developed a responsive chat interface using JavaScript, HTML, and CSS, enabling smooth user interaction with dynamic message rendering and AI-assisted conversational flow.","Enhanced user experience with a clean UI layout, streamlined chat animations, and modular code structure to ensure maintainability and performance."]'
+        data-github="https://github.com/Ayush-Kumar07/Ai-personal-Sneaker-Chatbot/tree/main">
+        <div class="card-icon">👟</div>
+        <h3>AI Personal Sneaker Chatbot</h3>
+        <p>AI-powered recommendation Chatbot with a responsive interface to help users discover shoes based on
+          preferences.</p>
+        <button class="card-btn">View Details <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+      <div class="project-card" data-title="Online Book Store" data-icon="📚"
+        data-tech="HTML · CSS · JavaScript · MySQL · PHP"
+        data-desc="A full-stack bookstore web application using PHP and MySQL for server-side logic and database operations."
+        data-points='["Built a full-stack bookstore web application using PHP for server-side logic and HTML/CSS/JS for frontend rendering.","Implemented user authentication and session-based login/logout with backend handling e.g., login.php, register.php, dbconnect.php.","Designed a clean, responsive UI with CSS and ensured smooth navigation across pages book listing, cart, login, registration."]'
+        data-github="https://github.com/Ayush-Kumar07/BookStore-Project">
+        <div class="card-icon">📚</div>
+        <h3>Online Book Store</h3>
+        <p>Full-stack bookstore web application featuring user authentication, session-based login, and a responsive UI.
+        </p>
+        <button class="card-btn">View Details <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section">
+    <h2>Certifications</h2>
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="cert-body">
+          <h3>GenAI Data Analytics Job Simulation</h3>
+          <p class="cert-issuer">TATA</p>
+          <p class="cert-desc">Job simulation focused on applying GenAI principles to data analytics.</p>
+          <div class="cert-footer">
+            <span class="cert-badge">Jul 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="cert-body">
+          <h3>Privacy and Security in Social Media</h3>
+          <p class="cert-issuer">NPTEL</p>
+          <p class="cert-desc">Explored topics related to user privacy and security frameworks on social media
+            platforms.</p>
+          <div class="cert-footer">
+            <span class="cert-badge">May 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <div class="cert-body">
+          <h3>Computer Communications</h3>
+          <p class="cert-issuer">Coursera</p>
+          <p class="cert-desc">Fundamentals of computer networking and telecommunications.</p>
+          <div class="cert-footer">
+            <span class="cert-badge">Dec 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <div class="cert-body">
+          <h3>Bits and Bytes</h3>
+          <p class="cert-issuer">Coursera</p>
+          <p class="cert-desc">Introduction to computer networking and IT support.</p>
+          <div class="cert-footer">
+            <span class="cert-badge">Sep 2024</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXTRA-CURRICULAR ACTIVITIES -->
+  <section id="activities" class="section">
+    <h2>Extra-Curricular Activities</h2>
+    <div class="achieve-grid">
+
+      <div class="achieve-card">
+        <div class="achieve-icon"><i class="fa-solid fa-gamepad"></i></div>
+        <p>Led my club's <strong>Esports team</strong> to a <strong>2nd-place finish</strong> at the university level.
+        </p>
+      </div>
+
+      <div class="achieve-card">
+        <div class="achieve-icon"><i class="fa-solid fa-code"></i></div>
+        <p>Participated in various <strong>Hackathons</strong> organized within the University.</p>
+      </div>
+
+      <div class="achieve-card">
+        <div class="achieve-icon"><i class="fa-solid fa-award"></i></div>
+        <p>Received an <strong>Appreciation Award</strong> from an NGO for dedicated volunteering.</p>
+      </div>
+
+      <div class="achieve-card">
+        <div class="achieve-icon"><i class="fa-solid fa-camera-retro"></i></div>
+        <p>Served as the <strong>Media Head</strong> at a College Club, managing digital presence and media outreach.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>
+      I'm open to opportunities, collaborations, and software development discussions.
+      Feel free to reach out — I'd love to connect!
+    </p>
+    <p style="margin-top:14px;">
+      Email: <a href="mailto:ayushyadav3527@gmail.com">ayushyadav3527@gmail.com</a>
+    </p>
+    <p style="margin-top:8px;">
+      Mobile: <a href="tel:+918797337230">+91 87973 37230</a>
+    </p>
+    <div class="contact-links">
+      <a href="https://github.com/Ayush-Kumar07" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/ayush-kumar-5228a2298/" target="_blank"><i
+          class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
