@@ -381,6 +381,13 @@ body.cursor-click #cursor-ring {
   letter-spacing: 0.1em;
 }
 
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: #f8fafc;
+  cursor: none;
+}
+
 .navbar ul {
   display: flex;
   gap: 26px;
@@ -1333,6 +1340,22 @@ body.cursor-click #cursor-ring {
 }
 
 @media (max-width: 768px) {
+  /* Performance Tweaks to eliminate lag */
+  * { 
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .bg-orbs, .grain, #particles, .card-shine {
+    display: none !important;
+  }
+  .navbar, .modal {
+    background: #030712 !important;
+  }
+  .glass-card, .project-card, .stat-card, .timeline-card, .achieve-card, .cert-card {
+    background: #0f172a !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
   /* Cursor restores natively for touch interfaces */
   * {
@@ -1344,7 +1367,8 @@ body.cursor-click #cursor-ring {
   .card-btn,
   .tags span,
   .modal-close,
-  .contact-links a {
+  .contact-links a,
+  .hamburger {
     cursor: pointer !important;
   }
 
@@ -1356,23 +1380,48 @@ body.cursor-click #cursor-ring {
     display: none !important;
   }
 
-  .navbar {
-    padding: 15px 20px;
-    flex-direction: column;
-    gap: 10px;
+  /* Hamburger Menu */
+  .hamburger {
+    display: block;
+    z-index: 100;
   }
 
-  .navbar div:first-child {
-    display: none;
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .navbar ul {
-    justify-content: center;
-    gap: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #030712;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
-  .navbar a {
-    font-size: 14px;
+  .navbar ul.show {
+    max-height: 400px; /* enough to show all items */
+  }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 15px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .section {
@@ -1464,21 +1513,6 @@ body.cursor-click #cursor-ring {
 }
 
 @media (max-width: 480px) {
-  .navbar ul {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 5px;
-    width: 100%;
-    justify-content: flex-start;
-    /* Hide scrollbar */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .navbar ul::-webkit-scrollbar {
-    display: none;
-  }
 
   .hero-buttons {
     flex-direction: column;
