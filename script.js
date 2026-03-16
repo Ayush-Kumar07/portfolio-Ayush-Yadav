@@ -46,6 +46,10 @@ const particles = Array.from({ length: 120 }, () => ({
 }));
 
 function animateParticles() {
+  if (window.innerWidth <= 768) {
+    requestAnimationFrame(animateParticles);
+    return;
+  }
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   particles.forEach(p => {
     ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -83,6 +87,10 @@ const trailDots = Array.from({ length: TRAIL_LENGTH }, (_, idx) => {
 document.addEventListener("mousemove", e => { mouseX = e.clientX; mouseY = e.clientY; });
 
 (function cursorLoop() {
+  if (window.innerWidth <= 768) {
+    requestAnimationFrame(cursorLoop);
+    return;
+  }
   dotX  += (mouseX - dotX)  * 0.9;
   dotY  += (mouseY - dotY)  * 0.9;
   ringX += (mouseX - ringX) * 0.14;
@@ -198,6 +206,23 @@ function updateActiveNav() {
 }
 window.addEventListener("scroll", updateActiveNav, { passive: true });
 updateActiveNav();
+
+// ── NAVBAR MOBILE TOGGLE ──────────────────────────────────────────
+const hamburger = document.getElementById("hamburger");
+const navLinksContainer = document.getElementById("navLinks");
+
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    navLinksContainer.classList.toggle("show");
+  });
+
+  // Close menu when clicking a link
+  navLinksContainer.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinksContainer.classList.remove("show");
+    });
+  });
+}
 
 // ── SCROLL REVEAL ─────────────────────────────────────────────────
 const revealObserver = new IntersectionObserver(entries => {
